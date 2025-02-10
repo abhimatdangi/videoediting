@@ -1,0 +1,158 @@
+/* Import Instrument Serif font if not already imported in your project */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+
+.faqSection {
+  background-color: #0C0C0C; /* Darker background to match the site */
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.5rem;
+  font-weight: 400; /* Instrument Serif looks better with normal weight */
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.faqContainer {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.faqItem {
+  margin-bottom: 1rem;
+  border: 1px solid #1a1a1a; /* Slightly lighter border */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #0C0C0C;
+  list-style: none;
+}
+
+.faqItem:hover {
+  border-color: #333;
+}
+
+.summary {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.summary:hover {
+  background-color: #0f0f0f; /* Slightly lighter hover state */
+}
+
+.summary::marker,
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.plusIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate plus icon when details is open */
+details[open] .plusIcon {
+  transform: rotate(45deg);
+}
+
+.answer {
+  padding: 1rem;
+  border-top: 1px solid #1a1a1a;
+  background-color: #0C0C0C; /* Match the main background */
+  line-height: 1.6;
+}
+
+/* Animation for opening/closing */
+details[open] .answer {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faqSection {
+    padding: 2rem 0;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .summary {
+    padding: 0.875rem;
+  }
+  
+  .answer {
+    padding: 0.875rem;
+  }
+}
+
+/* Add these new styles */
+.callToAction {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #1a1a1a;
+}
+
+.bookCallButton {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bookCallButton:hover {
+  background-color: #fff;
+  color: #0C0C0C;
+}
+
+/* Update the media query */
+@media (max-width: 768px) {
+  .callToAction {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+  }
+  
+  .bookCallButton {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+} 
