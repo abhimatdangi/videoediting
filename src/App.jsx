@@ -24,7 +24,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-logo">
           <a href="#top" className="logo-link">
-            <img src="/main.png" alt="Logo" className="nav-logo-img" />
+            <img src="main.png" alt="Logo" className="nav-logo-img" />
           </a>
         </div>
         <div className="nav-links">
@@ -38,8 +38,8 @@ function App() {
       <header id="top" className="hero">
         {/* Floating icons positioned within the hero */}
         <div className="floating-icons">
-          <img src="/premiere-pro.png" alt="Premiere Pro" />
-          <img src="/after-effects.png" alt="After Effects" />
+          <img src="premiere-pro.png" alt="Premiere Pro" />
+          <img src="after-effects.png" alt="After Effects" />
         </div>
 
         <div className="hero-content">
@@ -58,16 +58,16 @@ function App() {
             </h2>
             <div className="client-avatars">
               <div className="avatar-wrapper">
-                <img src="/koshis.jpg" alt="Koshis" />
+                <img src="koshis.jpg" alt="Koshis" />
               </div>
               <div className="avatar-wrapper">
-                <img src="/daivd.jpg" alt="Daivd" />
+                <img src="daivd.jpg" alt="Daivd" />
               </div>
               <div className="avatar-wrapper">
-                <img src="/creativeclipstudios.jpg" alt="Creative Clip Studios" />
+                <img src="creativeclipstudios.jpg" alt="Creative Clip Studios" />
               </div>
               <div className="avatar-wrapper">
-                <img src="/wayne.jpg" alt="Wayne" />
+                <img src="wayne.jpg" alt="Wayne" />
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@ function App() {
                 </p>
                 <div className="testimonial-author">
                   <div className="author-avatar">
-                    <img src="/koshis.jpg" alt="Koshis" />
+                    <img src="koshis.jpg" alt="Koshis" />
                   </div>
                   <div className="author-info">
                     <h4>Koshish Rijal</h4>
@@ -270,7 +270,7 @@ function App() {
                 </p>
                 <div className="testimonial-author">
                   <div className="author-avatar">
-                    <img src="/daivd.jpg" alt="Daivd" />
+                    <img src="daivd.jpg" alt="Daivd" />
                   </div>
                   <div className="author-info">
                     <h4>David Murumbi</h4>
@@ -288,7 +288,7 @@ function App() {
                 </p>
                 <div className="testimonial-author">
                   <div className="author-avatar">
-                    <img src="/wayne.jpg" alt="Wayne" />
+                    <img src="wayne.jpg" alt="Wayne" />
                   </div>
                   <div className="author-info">
                     <h4>Wayne Danai</h4>

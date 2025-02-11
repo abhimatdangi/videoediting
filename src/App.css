@@ -700,9 +700,10 @@ body {
 }
 
 .nav-logo-img {
-  width: 24px;  /* Adjust this size as needed */
+  width: 24px;
   height: auto;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .logo-link:hover .nav-logo-img {
@@ -744,9 +745,63 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Add underline animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: var(--primary-blue);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+/* Hover effect */
 .nav-link:hover {
   color: var(--primary-blue);
   opacity: 1;
+  transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Add glow effect on hover */
+.nav-link:hover {
+  text-shadow: 0 0 8px rgba(11, 89, 236, 0.3);
+}
+
+/* Active state */
+.nav-link.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Add subtle scale effect */
+.nav-links a {
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  transform: scale(1.1);
+}
+
+/* Add staggered animation delay for siblings */
+.nav-links a:nth-child(1):hover ~ a {
+  transform: translateX(5px);
+}
+
+.nav-links a:nth-child(2):hover ~ a {
+  transform: translateX(5px);
+}
+
+.nav-links a:nth-child(3):hover ~ a {
+  transform: translateX(5px);
 }
 
 /* Smooth scroll behavior */
@@ -1127,28 +1182,29 @@ html {
 
 /* Add floating icons */
 .floating-icons {
-  position: absolute; /* Use absolute to position relative to the hero */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Ensure they don't interfere with other elements */
-  z-index: 1; /* Ensure it stays behind the text but above the background */
+  pointer-events: none;
+  z-index: 1;
 }
 
 .floating-icons img {
   position: absolute;
-  width: 80px; /* Adjust size as needed */
+  width: 80px;
   height: auto;
   opacity: 0.5;
   transition: opacity 0.3s ease;
+  display: block;
 }
 
 .floating-icons img:hover {
   opacity: 1; /* Set to 100% opacity on hover */
 }
 
-/* Position each icon randomly */
+/* Position each floating icon */
 .floating-icons img:nth-child(1) {
   top: 20%;
   left: 10%;
@@ -1156,13 +1212,13 @@ html {
 
 .floating-icons img:nth-child(2) {
   top: 60%;
-  left: 80%; /* Move slightly more to the right */
+  left: 80%;
 }
 
 /* Ensure hero content is above the icons */
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensure text is above the icons */
+  z-index: 2;
 }
 
 /* Dot animation background */
@@ -1173,7 +1229,7 @@ html {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0; /* Ensure it stays behind other content */
+  z-index: 0;
   overflow: hidden;
 }
 
