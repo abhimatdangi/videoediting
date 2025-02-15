@@ -1,0 +1,9 @@
+# Set default behavior to automatically normalize line endings
+* text=auto eol=lf
+
+# Force .gitattributes to always have LF line endings
+.gitattributes text eol=lf
+
+# Declare files that will always have CRLF line endings on checkout
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf 
