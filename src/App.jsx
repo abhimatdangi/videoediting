@@ -24,7 +24,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-logo">
           <a href="#top" className="logo-link">
-            <img src="main.png" alt="Logo" className="nav-logo-img" />
+            <img src={`${import.meta.env.BASE_URL}main.png`} alt="Abhimat Dangi" className="nav-logo-img" />
           </a>
         </div>
         <div className="nav-links">
